@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-/* & + subheading denotes Subheading next to Heading*/
+/* & + h1 denotes h1 next to Heading*/
 export const Heading = styled.h1`
     margin-top: 0;
     margin-bottom: 0;
@@ -15,8 +15,11 @@ export const Heading = styled.h1`
         font-size: 72px;
     }
 
-    & + ${Subheading} {
-        margin-top: 32px;
+    // Styles for handling spacing between text elements
+    & + h1,
+    & + h2,
+    & + p {
+        margin-top: 21px;
     }
 `;
 
@@ -32,5 +35,28 @@ export const Subheading = styled.h2`
 
     @media (min-width: 768px) {
         font-size: 48px;
+    }
+    // Styles for handling spacing between text elements
+    & + h1,
+    & + h2,
+    & + p {
+        margin-top: 21px;
+    }
+`;
+
+export const Text = styled.p`
+    margin-top: 0;
+    font-size: 16px;
+
+    @media (min-width: 768px) {
+        font-size: 18px;
+    }
+
+    @media (min-width: 992px) {
+        font-size: 21px;
+    }
+
+    & + & {
+        margin-top: 32px;
     }
 `;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+// text-align: center; --add or not??
 const Container = styled.div`
     padding-right: 15px;
     padding-left: 15px;

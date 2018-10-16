@@ -5,17 +5,11 @@ import { Link } from "react-router";
 // Import Container component
 import Button from "./button";
 import Container from "./container";
-
+import Section from "./section";
 // Import Text components
 import { Heading, Subheading } from "./contenttext";
 
-const HomeWrapper = styled.section`
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+const HomeWrapper = styled(Section)`
     background-image: url(https://source.unsplash.com/_hpk_92Crhs/480x800);
     background-size: cover;
     background-repeat: no-repeat;
@@ -69,9 +63,9 @@ export default class Home extends React.Component {
                 <Container>
                     <Heading>Roshni Mani</Heading>
 
-                    <Subheading>Web Developer</Subheading>
+                    <Subheading>Full Stack Web Developer</Subheading>
 
-                    <HomeButton href="/portfolio">My work</HomeButton>
+                    <HomeButton href="/portfolio">My Projects</HomeButton>
                 </Container>
             </HomeWrapper>
         );
