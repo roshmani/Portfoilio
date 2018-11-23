@@ -13,8 +13,8 @@ export default class Main extends React.Component {
                 <Navi />
                 <Route exact path="/" component={Home} />
                 <Route path="/about" component={About} />
-                <Route path="/contact" component={Contact} />
                 <Route path="/portfolio" component={Portfolio} />
+                <Route path="/contact" component={Contact} />
             </div>
         );
     }

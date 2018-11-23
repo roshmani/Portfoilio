@@ -1,84 +1,6 @@
 import React from "react";
-import styled, { css } from "styled-components";
-import Button from "./button";
-
-const Header = styled.header`
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    width: 100%;
-`;
-
-const NavWrapper = styled.nav`
-    padding: 16px;
-    display: flex;
-    justify-content: flex-end;
-
-    @media (max-width: 479px) {
-        flex-direction: column;
-        align-items: flex-end;
-
-        /* If navigation is open (show is true) ,good to know we can give condition in CSS , a new insight*/
-        ${props =>
-            props.isOpen &&
-            css`
-                ul {
-                    position: absolute;
-                    top: 64px;
-                    max-height: 1000px;
-                }
-            `};
-    }
-`;
-
-const NavList = styled.ul`
-    margin: 0;
-    display: flex;
-    overflow: hidden;
-    flex-direction: column;
-    justify-content: flex-end;
-    list-style-type: none;
-    height: auto;
-    max-height: 0;
-
-    @media (min-width: 480px) {
-        flex-direction: row;
-        justify-content: flex-end;
-        max-height: 1000px;
-    }
-`;
-
-const NavItem = styled.li`
-    & + & {
-        margin-top: 12px;
-    }
-
-    @media (min-width: 480px) {
-        & + & {
-            margin-top: 0;
-            margin-left: 32px;
-        }
-    }
-
-    a {
-        font-size: 16px;
-        font-weight: bold;
-        text-decoration: none;
-        color: #fff;
-        transition: color 0.25s ease-in-out;
-
-        &:hover {
-            color: #888;
-        }
-    }
-`;
-
-const NavButton = styled(Button)`
-    @media (min-width: 479px) {
-        display: none;
-    }
-`;
+import MenuButton from "./menubutton";
+import MobileMenu from "./menumobile";
 
 export default class Navi extends React.Component {
     constructor(props) {
@@ -87,10 +9,15 @@ export default class Navi extends React.Component {
         this.state = {
             show: false
         };
-
+        this.handleMouseDown = this.handleMouseDown.bind(this);
         this.toggleMenu = this.toggleMenu.bind(this);
     }
 
+    handleMouseDown(e) {
+        this.toggleMenu();
+        console.log("clicked", this.state.show);
+        e.stopPropagation();
+    }
     toggleMenu() {
         this.setState({
             show: !this.state.show
@@ -99,28 +26,44 @@ export default class Navi extends React.Component {
 
     render() {
         return (
-            <Header>
-                <NavWrapper isOpen={this.state.show}>
-                    <NavButton onClick={this.toggleMenu}>Menu</NavButton>
-                    <NavList>
-                        <NavItem>
-                            <a href="/">Home</a>
-                        </NavItem>
+            <header>
+                <nav className="navWrapper">
+                    <div className="navListwrapper">
+                        <ul className="navList">
+                            <li className="navItem">
+                                <a className="navLink" href="/">
+                                    Home
+                                </a>
+                            </li>
 
-                        <NavItem>
-                            <a href="/about">About</a>
-                        </NavItem>
+                            <li className="navItem">
+                                <a className="navLink" href="/about">
+                                    About
+                                </a>
+                            </li>
 
-                        <NavItem>
-                            <a href="/portfolio">Portfolio</a>
-                        </NavItem>
+                            <li className="navItem">
+                                <a className="navLink" href="/portfolio">
+                                    Portfolio
+                                </a>
+                            </li>
 
-                        <NavItem>
-                            <a href="/contact">Contact</a>
-                        </NavItem>
-                    </NavList>
-                </NavWrapper>
-            </Header>
+                            <li className="navItem">
+                                <a className="navLink" href="/contact">
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="mobileMenu">
+                        <MenuButton handleMouseDown={this.handleMouseDown} />
+                        <MobileMenu
+                            handleMouseDown={this.handleMouseDown}
+                            menuVisibility={this.state.show}
+                        />
+                    </div>
+                </nav>
+            </header>
         );
     }
 }
