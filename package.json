@@ -35,11 +35,20 @@
     "react-router-dom": "^4.3.1",
     "styled-components": "^3.4.10",
     "webpack": "^4.20.2",
-    "webpack-dev-middleware": "^3.4.0",
-    "webpack-dev-server": "^3.1.9"
+    "webpack-dev-middleware": "^3.4.0"
   },
   "devDependencies": {
-    "eslint-plugin-react": "^7.11.1"
+    "eslint-plugin-react": "^7.11.1",
+    "serviceworker-webpack-plugin": "^1.0.0-alpha02",
+    "uglifyjs-webpack-plugin": "^2.0.1"
   },
-  "description": ""
+  "description": "My Portfolio ----- **********************************Under Construction ***********************",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roshmani/Portfoilio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/roshmani/Portfoilio/issues"
+  },
+  "homepage": "https://github.com/roshmani/Portfoilio#readme"
 }

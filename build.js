@@ -1,5 +1,5 @@
 const webpack = require("webpack");
-
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const plugins = [];
 
 if (require.main == module) {
@@ -9,10 +9,17 @@ if (require.main == module) {
                 NODE_ENV: JSON.stringify("production")
             }
         }),
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false
-            }
+        new UglifyJsPlugin({
+            cache: true,
+            parallel: true,
+            uglifyOptions: {
+                compress: {
+                    warnings: false
+                },
+                ecma: 6,
+                mangle: true
+            },
+            sourceMap: true
         })
     );
 }
