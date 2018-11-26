@@ -16,13 +16,11 @@ export default class About extends React.Component {
                         path.
                     </p>
                     <p className="text">
-                        During my software development career , i have involved
-                        myself in end-to-end development of software products
-                        from requirement analysis to system study, designing,
-                        coding testing, de-bugging, documentation and
-                        implementation. I am not a big talker , but effective
-                        communicator and during my career have worked
-                        efficienctly with international teams.
+                        My advantage,.. is my experience working as a Software
+                        Developer , even if not in web development. I am not a
+                        big talker , but effective communicator and during my
+                        career have worked efficienctly with international
+                        teams.
                     </p>
                     <p className="text">
                         I like to learn new things and am a quick learner which

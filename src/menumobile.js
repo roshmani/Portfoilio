@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 class MobileMenu extends React.Component {
     render() {
@@ -15,18 +15,20 @@ class MobileMenu extends React.Component {
                 onMouseDown={this.props.handleMouseDown}
                 className={visibility}
             >
-                <h2>
-                    <Link to="/">Home</Link>
-                </h2>
-                <h2>
-                    <Link to="/about">About</Link>
-                </h2>
-                <h2>
-                    <Link to="/portfolio">Portfolio</Link>
-                </h2>
-                <h2>
-                    <Link to="/contact">Contact</Link>
-                </h2>
+                <nav>
+                    <h2>
+                        <a href="/">Home</a>
+                    </h2>
+                    <h2>
+                        <a href="/about">About</a>
+                    </h2>
+                    <h2>
+                        <a href="/portfolio">Portfolio</a>
+                    </h2>
+                    <h2>
+                        <a href="/contact">Contact</a>
+                    </h2>
+                </nav>
             </div>
         );
     }
