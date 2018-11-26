@@ -29,7 +29,8 @@ export default class Portfolio extends React.Component {
                             <p className="projDescription">
                                 Codecube is a website which can be used to share
                                 code or pair program. Technology used are
-                                React.js,Node.js,Webpack,socket.io,PostgreSQL
+                                React.js, Node.js, Webpack, socket.io,
+                                PostgreSQL.
                             </p>
                         </div>
                         <div className="project">
@@ -47,8 +48,9 @@ export default class Portfolio extends React.Component {
                             <p className="projDescription">
                                 Twinnies Gaggle is a social media project meant
                                 for families with multiples. Technology used are
-                                React.js,Node.js,Webpack,socket.io,PostgreSQL,AWS
-                                and S3 for storage,multer for fileupload.
+                                React.js, Node.js, Webpack ,socket.io,
+                                PostgreSQL, AWS and S3 for storage, multer for
+                                fileupload.
                             </p>
                         </div>
                         <div className="project">
@@ -65,8 +67,8 @@ export default class Portfolio extends React.Component {
                             </a>
                             <p className="projDescription">
                                 Petition Project is petition for non-smoking
-                                movies for kids. Technology used are
-                                Express.js,Expresshandlebars,PostgreSQL.
+                                movies for kids. Technology used are Express.js,
+                                Expresshandlebars, PostgreSQL.
                             </p>
                         </div>
                         <div className="project">
@@ -83,10 +85,10 @@ export default class Portfolio extends React.Component {
                             </a>
                             <p className="projDescription">
                                 Imageboard is a image gallery project where you
-                                can upload,comment ,share and search for images.
-                                Technology used are
-                                Vue.js,Node.js,PostgreSQL,AWS and S3 for
-                                storage,Multer for fileupload.
+                                can upload, comment, share and search for
+                                images. Technology used are Vue.js, Node.js,
+                                PostgreSQL, AWS and S3 for storage, Multer for
+                                fileupload.
                             </p>
                         </div>
                         <div className="project">
